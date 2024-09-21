@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Mode, CandidatesContext, RankingsContext, ModeContext } from './Context';
+import { Main } from './Main';
 
 function App() {
+  const modeState = useState<Mode>('setup');
+  const candidatesState = useState<string[]>([]);
+  const rankingsState = useState<string[]>([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ModeContext.Provider value={modeState}>
+      <CandidatesContext.Provider value={candidatesState}>
+        <RankingsContext.Provider value={rankingsState}>
+          <Main />
+        </RankingsContext.Provider>
+      </CandidatesContext.Provider>
+    </ModeContext.Provider>
   );
 }
 
