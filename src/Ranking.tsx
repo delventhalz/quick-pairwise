@@ -1,6 +1,6 @@
 export function Ranking() {
   return (
-    <div className="ranking">
+    <div className="ranking mode">
       Ranking
     </div>
   )

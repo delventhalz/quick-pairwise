@@ -2,4 +2,21 @@
 .main {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.mode {
+  flex: 1;
+}
+
+.setup {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.setup-buttons {
+  padding-top: 1em;
+  justify-content: flex-end;
 }

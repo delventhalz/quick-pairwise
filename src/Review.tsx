@@ -1,6 +1,6 @@
 export function Review() {
   return (
-    <div className="review">
+    <div className="review mode">
       Review
     </div>
   )
