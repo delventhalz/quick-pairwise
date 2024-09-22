@@ -6,6 +6,7 @@ import {
   Textarea,
   UnorderedList
 } from '@chakra-ui/react'
+import shuffle from 'lodash/shuffle';
 import { ChangeEvent, useContext, useState } from 'react'
 import { CandidatesContext, ModeContext } from './Context';
 
@@ -26,6 +27,7 @@ export function Setup() {
 
   const onStart = () => {
     setMode('ranking');
+    setCandidates(shuffle(candidates));
   };
 
   return (
