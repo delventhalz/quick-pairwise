@@ -16,7 +16,29 @@
   padding-right: 4em;
 }
 
+.review {
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
 .setup-buttons {
   padding-top: 1em;
   justify-content: flex-end;
+}
+
+.candidate {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
